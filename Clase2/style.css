@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.titulo{
+    color: blue;
+}
+
+p{background-color: aqua;
+margin: 20px;}
+
+.primerparrafo {background-color:darkblue;
+color: white;
+border-radius: 5px;
+padding: 10px;
+margin: 5px;}
+
+#este{background-color: gray;}
+
+.square{background-color: aqua;
+height: 100px;
+width: 400px;
+margin-top: 30px;
+margin-left: 10px;
+border: 5px solid darkblue;
+align-items: center;} 
+
+.parrafo{color: darkblue;
+text-align: center;
+padding-top: 10px;
+font-size: 30px;}

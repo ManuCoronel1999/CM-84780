@@ -1,0 +1,67 @@
+*{padding: 0px;
+margin: 0px;
+background-color: rgb(80, 80, 80);}
+
+.titulosh1{padding-bottom: 5px;
+margin: 20px;
+text-align: center;
+font-size: 12px;
+color: white;}
+
+.botonsecundario {background-color: darkslategrey;
+margin: 20px;
+padding: 20px 50px;
+border-radius: 10px;
+color: white;
+border: solid blue;
+text-align: center;}
+
+.botonprimario {background-color: rgb(55, 146, 237);
+margin: 20px;
+padding: 20px 50px;
+border-radius: 10px;
+color: white;
+text-align: center;}
+
+.textcontainer{
+  margin: 0;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center; 
+  text-align: center; 
+  gap: 22px; 
+color: white;}
+
+.contenedorbotones{
+    gap: 1px;
+    display: flex;
+    justify-content: center;
+    align-self: center;}
+
+.cardscontainer{
+    display: flex;
+    margin-top: 50px;
+}
+
+.card{
+    width: 300px;
+    margin: auto;
+text-align: center;}
+
+.imagen{
+  background-color: #ddd;
+  width: 100%;
+  height: 250px;
+  border-radius: 15px; 
+  margin-bottom: 15px;}
+
+.titulocard{
+  margin: 0px;
+font-size: 18px;
+color: white;}
+
+.fechacard{margin: 0px;
+font-size: 12px;
+color: white;}
