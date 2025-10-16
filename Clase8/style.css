@@ -1,0 +1,53 @@
+/* .box{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    transform: translateX(50px) translateY(50px) rotate(45deg);
+}
+
+h1{color: white;}
+
+body{
+    background-image: linear-gradient(white,red, black);
+} */
+
+/* button{background-color: yellow;
+color: black;
+padding: 10px 20px;
+border-radius: 10px;
+cursor: pointer;
+
+transition: background-color 5s ease, transform .5s ease;
+}
+
+button:hover{
+    background-color: black;
+    transform: scale(1.1);
+    color: white;
+} */
+
+@keyframes girar{
+    0%{transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+@keyframes mover{  
+0% {transform: translateX(0);} /* empieza originalmente en 0 */
+50% {transform: translateX(100px);} /* a la mitad se va a 100px */
+100% {transform: translateX(0);} /* Volver a la posición inicial */}
+
+@keyframes aparecer{  
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+.box{width: 100px;
+height: 100px;
+background-color: aqua;
+animation: mover 2s infinite;
+animation: girar 3s linear infinite}
+
+.texto{
+    font-size: 100px;
+    animation: aparecer 2s ease-in-out infinite;
+}
