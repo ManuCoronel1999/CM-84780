@@ -1,0 +1,110 @@
+$fuente: "Roboto", sans-serif;
+$a: #2D2D2D;
+$b: white;
+
+@mixin contenedor(){
+    max-width: 1250px;
+    margin: auto auto;}
+
+@mixin flexbox($medidaJC: unset, $medidaAI: unset){
+    display: flex;
+    justify-content: $medidaJC;
+    align-items: $medidaAI;}
+
+@mixin laptopXL{
+    @media (max-width:1200px){
+    @content }
+}
+
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: $fuente;
+color: $b}
+
+body{
+    @include contenedor();
+    background: linear-gradient(90deg,
+    rgba(2, 0, 36, 1) 0%, 
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%);
+    height: 100vh;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.italic{
+    font-style: italic;
+}
+.Bold{
+    font-weight: 700;
+}
+
+@for $i from 0 through 3{
+    h#{$i + 1}{
+        font-size: 150px - ($i*40);
+    }}
+
+header{
+    @include flexbox(space-between, center);
+    margin-top: 35px;
+    h4{font-weight: 00;}
+
+    nav{
+        @include flexbox(unset, center);
+    display: flex;
+    gap: 25px;
+    
+    a:hover{
+        color: $a}}
+
+     .redes{
+        @include flexbox(unset, center);
+        a{
+            @include flexbox(unset, center);
+        }
+        img{
+            width: 30px;
+        }
+    }      
+}
+
+main{
+    @include flexbox(space-between, center);
+    margin-top: 90px;
+    h3{font-weight: 100;}}
+    h4{width: 300px;}
+    img{width: 700px;
+    margin-right: 55px;}
+
+@include laptopXL{
+    body{
+        text-align: center;
+        height: auto;
+    }
+    header{
+        flex-direction: column;
+        gap: 5px;
+        .redes a{
+            font-weight: 600;
+            margin: 15px 25px 0px 0px;
+        }
+        h4{
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+    }
+    main{
+        margin-top: 70px;
+        flex-direction: column;
+    }
+}
+
+   
+
+

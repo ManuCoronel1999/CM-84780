@@ -1,0 +1,252 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #111;
+  background: #f2f2f2;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  position: relative;
+
+  &__logo {
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      width: 24px;
+      height: 2px;
+      background: #111;
+      transition: all 0.3s;
+    }
+  }
+
+  &__menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: #111;
+      position: relative;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #5e9dfc;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+
+      &__content {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0.5rem 0;
+        animation: fadeIn 0.3s ease;
+
+        li a {
+          padding: 0.5rem 1rem;
+          display: block;
+          &:hover {
+            background: #f5f5f5;
+          }
+        }
+      }
+
+      &:hover .dropdown__content {
+        display: flex;
+      }
+    }
+  }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 4rem 2rem;
+  gap: 2rem;
+
+  .intro {
+    flex: 1;
+
+    h1 {
+      font-size: 2.5rem;
+      .highlight {
+        color: #5e9dfc;
+      }
+    }
+
+    .subtitle {
+      margin: 0.5rem 0 2rem;
+      font-weight: 500;
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      .btn-project {
+        text-decoration: none;
+        color: #111;
+        border-bottom: 1px solid #111;
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s;
+
+        span {
+          transition: transform 0.3s;
+        }
+
+        &:hover {
+          color: #5e9dfc;
+          border-color: #5e9dfc;
+
+          span {
+            transform: translateX(4px);
+          }
+        }
+      }
+    }
+
+    .more {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .arrow {
+        font-size: 1.5rem;
+        transition: transform 0.3s;
+      }
+
+      &:hover .arrow {
+        transform: translateY(5px);
+      }
+    }
+  }
+
+  .img-hero {
+    flex: 1;
+    background: #ddd;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ---------- TABS ---------- */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  .tab {
+    font-weight: 600;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &.active {
+      color: #111;
+      border-bottom: 2px solid #111;
+    }
+
+    &:hover {
+      color: #5e9dfc;
+    }
+  }
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+  padding: 3rem 2rem;
+  min-height: 300px;
+  background: #eaeaea;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+
+    ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .nav.open .nav__menu {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+
+    .img-hero {
+      height: 250px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .tabs {
+    gap: 1rem;
+  }
+}

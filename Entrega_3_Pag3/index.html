@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <header class="navbar">
+    <div class="logo">PORTAFOLIO</div>
+    <nav class="nav-links">
+      <a href="#">Proyectos</a>
+      <a href="#">Sobre mí</a>
+      <a href="#">Contacto</a>
+      <a href="#">Casos de estudio</a>
+      <a href="#">Certificaciones</a>
+    </nav>
+    <div class="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-text">
+      <h1>Hola! Soy <span class="highlight">Manuel</span></h1>
+      <h2>Diseñador UX/UI / Frontend</h2>
+      <p>Creativo enfocado en resolver la necesidad de los usuarios a través de soluciones estratégicas y digitales.</p>
+      <div class="buttons">
+        <a href="#" class="btn btn-dark">Descargar CV</a>
+        <a href="#" class="btn btn-light">Contáctame</a>
+      </div>
+      <div class="socials">
+        <a href="#"><img src="Img/Link.png" alt="LinkedIn"></a>
+        <a href="#"><img src="Img/Be.png" alt="Behance"></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="Img/Desktop.png" alt="Preview de app">
+    </div>
+  </main>
+
+  <section class="work">
+    <div class="tabs">
+      <button class="active">Diseño UX</button>
+      <button>Front end</button>
+    </div>
+    <div class="features">
+      <span>Feature</span>
+      <span>Feature</span>
+      <span>Feature</span>
+      <span>Feature</span>
+      <span>Feature</span>
+    </div>
+    <div class="work-image">
+      <img src="Img/Rectangle 3.png" alt="Imagen diseño UX">
+    </div>
+  </section>
+
+  <script>
+    // Toggle menú móvil
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+  </script>
+    
+</body>
+</html>
